@@ -1,5 +1,5 @@
 [package]
-name = "bevy-magnetite"
+name = "bevy_magnetite"
 version = "0.1.0"
 edition = "2024"
 
