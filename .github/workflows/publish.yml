@@ -1,0 +1,34 @@
+name: Publish crate
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image: rust:latest
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v6.0.1
+      - name: Install toml-cli
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: toml-cli
+      - name: Read version from Cargo.toml
+        id: get_version
+        run: echo "version=$(toml get -r Cargo.toml package.version)" >> "$GITHUB_OUTPUT"
+      - name: Publish
+        uses: actions-rs/cargo@v1
+        with:
+          command: publish
+        env:
+           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        if: ${{ github.ref_name == format('v{0}', steps.get_version.outputs.version) }}
