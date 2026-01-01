@@ -324,13 +324,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bevy-magnetite"
-version = "0.1.0"
-dependencies = [
- "bevy",
-]
-
-[[package]]
 name = "bevy_a11y"
 version = "0.17.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -917,6 +910,13 @@ dependencies = [
  "quote",
  "syn",
  "toml_edit",
+]
+
+[[package]]
+name = "bevy_magnetite"
+version = "0.1.0"
+dependencies = [
+ "bevy",
 ]
 
 [[package]]
