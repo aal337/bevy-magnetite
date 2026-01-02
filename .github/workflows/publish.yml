@@ -1,9 +1,8 @@
 name: Publish crate
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
@@ -11,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: rust:latest
+    environment: crates.io
     outputs:
       version: ${{ steps.get_version.outputs.version }}
     steps:
