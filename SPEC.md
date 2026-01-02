@@ -8,7 +8,7 @@ What we aim to replace (or better, reimplement for education purposes):
 - [PipelinedRenderingPlugin](https://docs.rs/bevy/latest/bevy/render/pipelined_rendering/struct.PipelinedRenderingPlugin.html)
 - [CorePipelinePlugin](https://docs.rs/bevy/latest/bevy/core_pipeline/struct.CorePipelinePlugin.html)
 - [PostProcessPlugin](https://docs.rs/bevy/latest/bevy/post_process/struct.PostProcessPlugin.html)
-- [AntiAiliasPlugin](https://docs.rs/bevy/latest/bevy/anti_alias/struct.AntiAliasPlugin.html)
+- [AntiAliasPlugin](https://docs.rs/bevy/latest/bevy/anti_alias/struct.AntiAliasPlugin.html)
 - [SpritePlugin](https://docs.rs/bevy/latest/bevy/sprite/struct.SpritePlugin.html)
 - [SpriteRenderPlugin](https://docs.rs/bevy/latest/bevy/sprite_render/struct.SpriteRenderPlugin.html)
 - [UiPlugin](https://docs.rs/bevy/latest/bevy/ui/struct.UiPlugin.html)
